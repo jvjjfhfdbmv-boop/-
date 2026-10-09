@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ليلة كلها إلج 🌙</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏮</text></svg>">
+<link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Tajawal:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#fff4ec;--rose:#ffb8d1;--orch:#b57bff;--bg:#140a2e;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;overflow:hidden;background:var(--bg);color:var(--cream);font-family:'Tajawal','Segoe UI',sans-serif;-webkit-tap-highlight-color:transparent}
+#bg{position:fixed;inset:0;width:100%;height:100%;z-index:0}
+#sc{position:fixed;inset:0;z-index:2;overflow-y:auto;scroll-snap-type:y mandatory;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+#sc::-webkit-scrollbar{display:none}
+.s{min-height:100vh;min-height:100svh;scroll-snap-align:center;display:flex;align-items:center;justify-content:center;padding:70px 26px}
+.in{max-width:520px;text-align:center}
+h1,h2{font-family:'Aref Ruqaa',serif;margin:0 0 14px;font-weight:700;line-height:1.35;
+background:linear-gradient(180deg,#fff,#ffcfe3 70%,#d9bfff);-webkit-background-clip:text;background-clip:text;color:transparent;
+filter:drop-shadow(0 4px 24px rgba(255,150,210,.45))}
+h1{font-size:clamp(50px,15vw,84px)}h2{font-size:clamp(36px,10.5vw,52px)}
+p{margin:10px 0;font-size:clamp(18px,5vw,22px);line-height:2;font-weight:500;text-shadow:0 2px 18px rgba(14,4,36,.85)}
+.ru{font:italic 500 16px/1 Georgia,serif;letter-spacing:.18em;color:var(--rose);opacity:.85;margin-bottom:18px;direction:ltr}
+.hint{margin-top:26px;font-size:15px;opacity:.7;animation:bob 2.4s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(8px)}}
+.sig{margin-top:14px;font-family:'Aref Ruqaa',serif;font-size:24px;color:var(--rose)}
+.rv{opacity:0;transform:translateY(26px);filter:blur(10px);transition:opacity 1.1s ease,transform 1.1s ease,filter 1.1s ease;transition-delay:calc(var(--i,0)*.22s)}
+.s.on .rv{opacity:1;transform:none;filter:none}
+.pill{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:50px;margin:8px 4px 0;padding:10px 26px;font:700 18px 'Tajawal',sans-serif;color:#fff;
+border:1px solid rgba(255,255,255,.45);border-radius:999px;cursor:pointer;text-decoration:none;
+background:linear-gradient(135deg,rgba(255,150,210,.35),rgba(150,110,255,.35));-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);
+box-shadow:0 10px 36px rgba(255,120,200,.28),inset 0 1px 0 rgba(255,255,255,.5);transition:transform .15s}
+.pill:active{transform:scale(.95)}
+.moods{display:flex;justify-content:center;gap:12px;margin:14px 0 6px}
+.moods button{width:62px;height:62px;font-size:32px;border-radius:50%;border:1px solid rgba(255,255,255,.4);background:rgba(255,255,255,.1);
+-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);cursor:pointer;transition:transform .2s}
+.moods button.on{transform:scale(1.2);background:rgba(255,150,210,.4)}
+.reply{min-height:2.2em;margin-top:10px;font-weight:700;color:#ffd6ee;font-size:clamp(18px,5vw,21px);line-height:1.9;text-shadow:0 2px 14px rgba(14,4,36,.9)}
+.rules{list-style:none;padding:0;margin:8px 0;text-align:right}
+.rules li{margin:10px 0;padding:12px 16px;border-radius:18px;font-size:clamp(17px,4.7vw,20px);line-height:1.8;font-weight:500;
+background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
+#ov{position:fixed;inset:0;z-index:20;display:flex;align-items:center;justify-content:center;flex-direction:column;text-align:center;padding:30px;
+background:radial-gradient(circle at 50% 35%,#3a1a6e,#140a2e 70%);transition:opacity 1.4s}
+#ov.out{opacity:0;pointer-events:none}
+.tools{position:fixed;z-index:10;top:calc(14px + env(safe-area-inset-top,0px));left:14px;display:flex;gap:8px}
+.tb{width:42px;height:42px;border-radius:50%;border:1px solid rgba(255,255,255,.4);background:rgba(20,10,46,.45);color:#fff;font-size:17px;display:flex;align-items:center;justify-content:center;cursor:pointer;text-decoration:none;-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+#dots{position:fixed;z-index:10;right:12px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:10px}
+#dots i{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.3);cursor:pointer;transition:.4s}
+#dots i.a{background:var(--rose);box-shadow:0 0 12px var(--rose);transform:scale(1.5)}
+.hide{display:none!important}
+:focus-visible{outline:3px solid #fff;outline-offset:3px}
+@media (prefers-reduced-motion:reduce){.rv{transition:opacity .3s;filter:none;transform:none}.hint{animation:none}}
+</style>
+</head>
+<body>
+<canvas id="bg"></canvas>
+
+<div id="ov">
+  <div class="ru">Луна не знает пути</div>
+  <h1>ليلة كلها إلج</h1>
+  <p>أول ما تضغطين، تبدأ الموسيقى 🎧</p>
+  <button class="pill" id="go">افتحي الليلة 🌙</button>
+</div>
+
+<div class="tools hide" id="tools">
+  <button class="tb" id="snd" aria-label="الصوت">♪</button>
+  <button class="tb" id="pz" aria-label="تشغيل تلقائي">⏸</button>
+  <a class="tb" href="https://www.youtube.com/results?search_query=%D0%9B%D1%83%D0%BD%D0%B0+%D0%BD%D0%B5+%D0%B7%D0%BD%D0%B0%D0%B5%D1%82+%D0%BF%D1%83%D1%82%D0%B8" target="_blank" rel="noopener noreferrer" aria-label="الأغنية الأصلية">▶</a>
+</div>
+<div id="dots"></div>
+
+<div id="sc">
+  <section class="s" data-t="6"><div class="in">
+    <div class="ru rv">Луна не знает пути</div>
+    <h1 class="rv" style="--i:1">ليلة كلها إلج</h1>
+    <p class="rv" style="--i:2">سوّيتها بإيدي، وبقلب خجول جداً 🌙</p>
+    <div class="hint rv" style="--i:3">اسحبي للأسفل ↓</div>
+  </div></section>
+
+  <section class="s" data-t="8"><div class="in">
+    <h2 class="rv" id="hello"></h2>
+    <p class="rv" style="--i:1">هذا الموقع انصنع لشخص واحد بس… وأنتِ تعرفين منو 🙈</p>
+  </div></section>
+
+  <section class="s" data-t="9"><div class="in">
+    <h2 class="rv">إشعار رسمي 📢</h2>
+    <p class="rv" style="--i:1">تم افتتاح هذا الموقع بحضور شخص خجول، وقمر ضايع، وكمية فوضى مشاعر بدون ترخيص 😂</p>
+  </div></section>
+
+  <section class="s" data-t="99"><div class="in">
+    <h2 class="rv">شلونج اليوم؟</h2>
+    <div class="moods rv" style="--i:1" id="moods"></div>
+    <div class="reply rv" style="--i:2" id="mr">اختاري مزاجج ✨</div>
+  </div></section>
+
+  <section class="s" data-t="99"><div class="in">
+    <h2 class="rv">آلة المجاملات 🎰</h2>
+    <p class="rv" style="--i:1">إذا طلعت مجاملة مو حلوة، هذا خطأ بالجهاز 😂</p>
+    <button class="pill rv" style="--i:2" id="cb">هاتي مجاملة ✨</button>
+    <div class="reply rv" style="--i:3" id="cr"></div>
+  </div></section>
+
+  <section class="s" data-t="14"><div class="in">
+    <h2 class="rv">قوانين الموقع 📜</h2>
+    <ul class="rules">
+      <li class="rv" style="--i:1">١) الموقع ما يحتاج منج أي جواب.</li>
+      <li class="rv" style="--i:2">٢) ممنوع تحسين بضغط أو محكمة 🙅‍♀️</li>
+      <li class="rv" style="--i:3">٣) مسموح تضحكين، وتصورين، وتدزينه لصديقاتج 😂</li>
+    </ul>
+  </div></section>
+
+  <section class="s" data-t="99"><div class="in">
+    <h2 class="rv">أطلقي فانوس أمنية 🏮</h2>
+    <p class="rv" style="--i:1">القمر يسمع الليلة، فاطلبي اللي تريدينه بصمت.</p>
+    <button class="pill rv" style="--i:2" id="wb">أطلقي الفانوس 🏮</button>
+    <div class="reply rv" style="--i:3" id="wr"></div>
+  </div></section>
+
+  <section class="s" data-t="99"><div class="in">
+    <h2 class="rv">كلمة وحدة جدّية 💌</h2>
+    <p class="rv" style="--i:1">بدون مزح، وبسرعة حتى ما أحمرّ: وجودج لطيف، وأحببت أكولها مرة وحدة.</p>
+    <p class="rv" style="--i:2">ما أريد شي منج. بس ديري بالج على روحج، وابقي هيج مبسوطة 🎀</p>
+    <div class="sig rv" style="--i:3">— صاحب الموقع الخجول 🙈</div>
+    <button class="pill rv" style="--i:4" id="again">من البداية 🌙</button>
+  </div></section>
+</div>
+
+<script>
+/* ===== إعدادات: ضع ملف الأغنية بجانب الصفحة واكتب اسمه هنا، مثلاً 'song.mp3' ===== */
+const SONG_SRC='';
+const MOODS={'😴':'تعبانة؟ اشربي شاي واتركي الدنيا ☕','😊':'هاي أحلى نسخة منج، وسجلتها بالأرشيف 📸','😤':'مفهوم. صاحب الموقع جاهز يستلم اللوم كله 🫡','🥹':'تعالي هنا… حضن بالكلمات 🤗'};
+const COMPS=['ابتسامتج لازم تنباع بالصيدليات، لأنها علاج 💊','لو الذوق شهادة، أنتِ دكتوراه من أول سنة 🎓','إذا ميكو سمعت ذوقج بالأغاني، تطلب منج استشارة 🎤','أنتِ إذا دخلتي مكان، الجو يصير أحسن ✨','لطافة ١٠٠٪، عناد ٣٪ (عادي، محسوب) 😂','إذا القمر ضايع، يسأل عنج مو عن الطريق 🌙','وجودج بالدنيا بونص ما أحد يستاهله 🎁'];
+const h=new Date().getHours();
+const $=id=>document.getElementById(id),reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
+$('hello').textContent=h<5?'سهرانة؟ مساء النور 🌙':h<12?'صباح الخير ☀️':h<17?'نهارج سعيد 🌤️':h<21?'مساء الخير 🌆':'مساء النور 🌙';
+const buzz=n=>{try{navigator.vibrate&&navigator.vibrate(n||12)}catch(e){}};
+
+/* ===== المشهد ===== */
+const cv=$('bg'),g=cv.getContext('2d'),sc=$('sc');
+let W,H,stars=[],flies=[],lant=[],petals=[],sp=0,px=0;
+const rgb=a=>a.map(Math.round).join(',');
+const mix=(a,b,t)=>a.map((v,i)=>v+(b[i]-v)*t);
+const SKY=[[[13,5,36],[42,20,88]],[[26,11,61],[75,29,110]],[[58,20,80],[255,158,192]]];
+const LAY=[{y:.60,a:.07,f:.004,c:[46,24,94],k:.3,m:1},{y:.69,a:.08,f:.006,c:[30,14,66],k:.55,m:1},{y:.80,a:.07,f:.008,c:[17,7,42],k:.85},{y:.92,a:.05,f:.011,c:[8,3,22],k:1.2}];
+function sprite(w,h,draw){const c=document.createElement('canvas');c.width=w;c.height=h;draw(c.getContext('2d'),w,h);return c}
+const GLOW=sprite(48,48,(x,w)=>{const r=x.createRadialGradient(24,24,0,24,24,24);r.addColorStop(0,'rgba(255,245,200,1)');r.addColorStop(.25,'rgba(255,215,140,.6)');r.addColorStop(1,'rgba(255,200,120,0)');x.fillStyle=r;x.fillRect(0,0,w,w)});
+const LANT=sprite(60,84,(x)=>{const r=x.createRadialGradient(30,40,2,30,40,30);r.addColorStop(0,'rgba(255,225,160,.9)');r.addColorStop(1,'rgba(255,170,110,0)');x.fillStyle=r;x.fillRect(0,0,60,84);
+  const b=x.createLinearGradient(0,20,0,64);b.addColorStop(0,'#ffe6b0');b.addColorStop(1,'#ff9a7a');x.fillStyle=b;x.beginPath();x.moveTo(20,22);x.lineTo(40,22);x.lineTo(44,56);x.quadraticCurveTo(30,64,16,56);x.closePath();x.fill();
+  x.fillStyle='#6b3a5a';x.fillRect(22,18,16,5);x.fillRect(19,56,22,4);x.strokeStyle='rgba(255,255,255,.35)';x.beginPath();x.moveTo(30,23);x.lineTo(30,58);x.stroke()});
+function newL(init,w){return{x:w?W*(.25+Math.random()*.5):Math.random()*W,y:w?H+40:init?Math.random()*H:H+60,v:w?Math.random()*.9+.8:Math.random()*.35+.25,sw:Math.random()*6,s:Math.random()*.5+.55,o:w?1:.55+Math.random()*.3,w}}
+function size(){
+  const d=Math.min(devicePixelRatio||1,2);W=innerWidth;H=innerHeight;cv.width=W*d;cv.height=H*d;g.setTransform(d,0,0,d,0,0);
+  stars=Array.from({length:Math.round(W*H/6000)},()=>({x:Math.random()*W,y:Math.random()*H*.65,r:Math.random()*1.3+.2,p:Math.random()*6,s:Math.random()*.003+.001}));
+  flies=Array.from({length:reduce?10:W<600?30:50},()=>({x:Math.random()*W,y:H*(.5+Math.random()*.45),p:Math.random()*6,s:Math.random()*.0008+.0004,z:Math.random()*10+8}));
+  lant=Array.from({length:reduce?3:W<600?7:11},()=>newL(true));
+  petals=Array.from({length:reduce?5:W<600?14:24},()=>({x:Math.random()*W,y:Math.random()*H,s:Math.random()*6+4,v:Math.random()*.5+.25,sw:Math.random()*6,a:Math.random()*6}));
+}
+function hill(L,i,t){
+  const ph=i*2.1,o=sp*70*L.k;g.beginPath();g.moveTo(0,H);
+  for(let x=0;x<=W+10;x+=10){const xs=(x+o)*L.f;g.lineTo(x,H*(L.y+L.a*(Math.sin(xs+ph)+.55*Math.sin(xs*2.3+ph*2)))-sp*H*.05*L.k)}
+  g.lineTo(W,H);g.closePath();g.fillStyle='rgb('+rgb(L.c)+')';g.fill();
+}
+function frame(t){
+  requestAnimationFrame(frame);if(document.hidden)return;
+  const tgt=sc.scrollTop/Math.max(1,sc.scrollHeight-sc.clientHeight);sp+=(tgt-sp)*.07;
+  const q=sp*2,i0=Math.min(1,Math.floor(q)),f=q-i0,top=mix(SKY[i0][0],SKY[i0+1][0],f),bot=mix(SKY[i0][1],SKY[i0+1][1],f);
+  const bg=g.createLinearGradient(0,0,0,H*.85);bg.addColorStop(0,'rgb('+rgb(top)+')');bg.addColorStop(1,'rgb('+rgb(bot)+')');g.fillStyle=bg;g.fillRect(0,0,W,H);
+  stars.forEach(s=>{g.fillStyle='rgba(255,255,255,'+((.3+.7*Math.abs(Math.sin(t*s.s+s.p)))*(1-sp*.8)).toFixed(2)+')';g.beginPath();g.arc(s.x+px*6*s.r,s.y,s.r,0,7);g.fill()});
+  const mx=W*(.7-sp*.2)+px*14,my=H*(.22+sp*.1),mr=Math.min(W,H)*.1,mc=mix([255,244,251],[255,214,170],sp);
+  const hl=g.createRadialGradient(mx,my,mr*.6,mx,my,mr*5.5);hl.addColorStop(0,'rgba('+rgb(mc)+',.4)');hl.addColorStop(1,'rgba('+rgb(mc)+',0)');g.fillStyle=hl;g.fillRect(0,0,W,H);
+  g.fillStyle='rgb('+rgb(mc)+')';g.beginPath();g.arc(mx,my,mr,0,7);g.fill();
+  g.fillStyle='rgba(150,120,200,.18)';[[.3,.2,.2],[-.3,.35,.15],[.1,-.35,.12]].forEach(c=>{g.beginPath();g.arc(mx+c[0]*mr,my+c[1]*mr,c[2]*mr,0,7);g.fill()});
+  LAY.forEach((L,i)=>{
+    hill(L,i,t);
+    if(L.m){const y0=H*(L.y-.03),mg=g.createLinearGradient(0,y0,0,y0+H*.2);mg.addColorStop(0,'rgba(255,170,215,0)');mg.addColorStop(.4,'rgba(255,170,215,'+(.13+sp*.1)+')');mg.addColorStop(1,'rgba(255,170,215,0)');g.fillStyle=mg;g.fillRect(0,y0,W,H*.2)}
+    if(i===1){
+      lant.forEach(l=>{l.y-=l.v;l.x+=Math.sin(l.sw+t*.0007)*.35;if(l.y<-80){if(l.w)l.dead=true;else{l.y=H+60;l.x=Math.random()*W}}
+        g.globalAlpha=l.o;g.drawImage(LANT,l.x-30*l.s,l.y-42*l.s,60*l.s,84*l.s);g.globalAlpha=1});
+      lant=lant.filter(l=>!l.dead);
+    }
+  });
+  g.globalCompositeOperation='lighter';
+  flies.forEach(p=>{const x=p.x+Math.sin(t*p.s+p.p)*30+px*10,y=p.y+Math.cos(t*p.s*1.3+p.p)*20,a=.35+.65*Math.abs(Math.sin(t*.002+p.p));g.globalAlpha=a;g.drawImage(GLOW,x-p.z/2,y-p.z/2,p.z,p.z)});
+  g.globalAlpha=1;g.globalCompositeOperation='source-over';
+  petals.forEach(p=>{p.y+=p.v;p.a+=.01;p.x+=Math.sin(p.sw+t*.0007)*.45;if(p.y>H+20){p.y=-20;p.x=Math.random()*W}
+    g.save();g.translate(p.x,p.y);g.rotate(p.a);g.fillStyle='rgba(255,185,215,.55)';g.beginPath();g.ellipse(0,0,p.s,p.s*.55,0,0,7);g.fill();g.restore()});
+}
+addEventListener('resize',size);addEventListener('pointermove',e=>{px=e.clientX/W-.5});size();requestAnimationFrame(frame);
+
+/* ===== الصوت: ملف الأغنية إن وُجد، وإلا مقطوعة حالمة ===== */
+let ac,master,playing=false,step=0,song=null,synthOn=false;
+const CH=[[110,261.63,329.63,440],[87.31,220,261.63,349.23],[130.81,196,329.63,523.25],[98,246.94,293.66,392]],PAT=[1,2,3,2,1,3,2,3],PENT=[440,523.25,587.33,659.25,783.99];
+function tone(f,type,dur,vol,att){if(!ac||ac.state!=='running')return;const o=ac.createOscillator(),n=ac.createGain(),t=ac.currentTime;
+  o.type=type;o.frequency.value=f;n.gain.setValueAtTime(0,t);n.gain.linearRampToValueAtTime(vol,t+att);n.gain.exponentialRampToValueAtTime(.0001,t+dur);o.connect(n);n.connect(master);o.start(t);o.stop(t+dur+.05)}
+function synth(){
+  if(synthOn)return;synthOn=true;
+  try{ac=new(window.AudioContext||window.webkitAudioContext)();ac.resume();master=ac.createGain();master.gain.value=0;master.gain.linearRampToValueAtTime(.6,ac.currentTime+4);
+    const d=ac.createDelay(1),fb=ac.createGain(),w=ac.createGain();d.delayTime.value=.44;fb.gain.value=.42;w.gain.value=.5;
+    master.connect(ac.destination);master.connect(d);d.connect(fb);fb.connect(d);d.connect(w);w.connect(ac.destination);playing=true;
+    setInterval(()=>{if(!playing)return;const bar=Math.floor(step/8)%4,i=step%8,c=CH[bar];
+      if(i===0){tone(c[0],'sine',3.8,.22,.08);tone(c[1],'sine',4,.05,1.2);tone(c[2],'sine',4,.05,1.2)}
+      tone(c[PAT[i]]*(i===4?2:1),'triangle',1.3,.07,.01);
+      if(i%2===1&&Math.random()<.45)tone(PENT[Math.floor(Math.random()*5)]*2,'sine',1.8,.04,.02);step++},60/68/2*1000);
+  }catch(e){$('snd').classList.add('hide')}
+}
+function startAudio(){
+  if(!SONG_SRC){synth();return}
+  song=new Audio(SONG_SRC);song.loop=true;song.volume=0;song.onerror=synth;
+  song.play().then(()=>{playing=true;let v=0;const f=setInterval(()=>{v+=.05;song.volume=Math.min(1,v);if(v>=1)clearInterval(f)},200)}).catch(synth);
+}
+$('snd').onclick=()=>{
+  if(song&&!synthOn){playing=!playing;playing?song.play():song.pause()}
+  else if(ac){playing=!playing;playing?ac.resume():ac.suspend()}
+  $('snd').textContent=playing?'♪':'✕';
+};
+
+/* ===== التنقل والتشغيل التلقائي ===== */
+const secs=[...document.querySelectorAll('.s')],dots=$('dots');let cur=0,tick=0,auto=true,hold=0;
+secs.forEach((s,i)=>{const d=document.createElement('i');d.onclick=()=>secs[i].scrollIntoView({behavior:'smooth'});dots.appendChild(d)});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');cur=secs.indexOf(e.target);tick=0;[...dots.children].forEach((d,k)=>d.className=k===cur?'a':'')}}),{root:sc,threshold:.55});
+secs.forEach(s=>io.observe(s));
+['touchstart','wheel','pointerdown','keydown'].forEach(ev=>sc.addEventListener(ev,()=>{hold=10},{passive:true}));
+setInterval(()=>{
+  if(!auto||document.hidden||$('ov').className.indexOf('out')<0)return;
+  if(hold>0){hold--;return}
+  tick++;const need=+secs[cur].dataset.t;
+  if(tick>=need&&cur<secs.length-1)secs[cur+1].scrollIntoView({behavior:reduce?'auto':'smooth'});
+},1000);
+$('pz').onclick=()=>{auto=!auto;$('pz').textContent=auto?'⏸':'▶'};
+$('again').onclick=()=>{buzz();sc.scrollTo({top:0,behavior:'smooth'})};
+
+/* ===== التفاعلات ===== */
+const mo=$('moods');Object.keys(MOODS).forEach(e=>{const b=document.createElement('button');b.textContent=e;b.setAttribute('aria-label',e);
+  b.onclick=()=>{buzz();[...mo.children].forEach(x=>x.classList.remove('on'));b.classList.add('on');$('mr').textContent=MOODS[e]};mo.appendChild(b)});
+let last=-1;$('cb').onclick=()=>{buzz();let k;do{k=Math.floor(Math.random()*COMPS.length)}while(k===last);last=k;$('cr').textContent=COMPS[k]};
+$('wb').onclick=()=>{buzz([20,40,20]);for(let k=0;k<7;k++)setTimeout(()=>lant.push(newL(false,true)),k*220);$('wr').textContent='طارت أمنيتج للقمر 🌙 الرد خلال ٣ إلى ٥ أيام عمل 😂'};
+
+$('go').onclick=()=>{startAudio();buzz(20);$('ov').classList.add('out');$('tools').classList.remove('hide');sc.scrollTop=0;secs[0].classList.add('on')};
+</script>
+</body>
+</html>
